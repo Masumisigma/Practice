@@ -1,0 +1,28 @@
+.row {
+    display: flex;
+   // width: 100%;
+   // flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.column {
+    //padding: 10px;
+
+}
+img
+{
+    flex-grow: 1;
+}
+/*.container
+{
+    display: flex;
+
+}*/
+
+@media (max-width: 575px) {
+    .row {
+        flex-direction: column;
+    }
+
+}
+
