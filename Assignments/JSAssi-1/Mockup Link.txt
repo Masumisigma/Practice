@@ -1,0 +1,8 @@
+1. https://www.loom.com/share/073f23691d314059a2096305b516e30a
+
+Please add other fields like address, city, state, phone etc., in both the forms. On selecting checkbox billing form fields should copy the shipping form fields. This you can see usually in checkout pages of the ecommerce sites.
+
+
+2. https://www.loom.com/share/41b84a30e7aa46468e54c316335ea2a8
+
+On hover of thumbnails below, show the image in the above place holder. This behavior you can see in the product pages image gallery.
