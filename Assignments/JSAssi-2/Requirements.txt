@@ -1,0 +1,5 @@
+1. Add phone field
+2. Add Confirm Email Address Field
+3. Add DOB field with javascript date picker
+4. Add show password feature if page is opened in mobile
+5. Add a review button when clicked display a lightbox popup with close button having all the details filled in the form. Keep this lightbox responsive.
