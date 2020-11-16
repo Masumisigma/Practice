@@ -1,0 +1,94 @@
+header
+{
+  background-color: darkslategray;
+  color: whitesmoke;
+  font-size: 40px;
+  padding: 5px;
+}
+p{
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0; !important;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.row{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+h1 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #ff4532;
+  font-size: 50px;
+  font-family: Chilanka;
+}
+
+
+.box{
+  width: 100%;
+  margin: 5%;
+}
+
+
+.content-name{
+  font-size: 20px;
+  text-align: center;
+  width: 86%;
+  height: 40px;
+  padding: 25px;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.content{
+  width: 86%;
+  height: auto;
+  color: black;
+  font-size: 18px;
+  padding: 4%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/********** Large devices only **********/
+@media (min-width: 992px) {
+  .col-lg-4 {
+  	float: left;
+    width: 33.33%;
+  }
+}
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-6,.col-md-12 {
+    float: left;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-12 {
+    margin-left: -10px;
+    width: 100%;
+  }
+  .name3{
+    margin-right: 65px;
+    width: 100px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .col-sm-12 {
+  	float: left;
+    width: 100%;
+  }
+  .content-name{
+    margin-right: 30px;
+  }
+}

@@ -1,0 +1,1124 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<style>
+			tr:nth-child(odd) {
+				background-color: navajowhite;
+			}
+			tr:nth-child(even) {
+				background-color: lightcyan;
+				display: none;
+			}
+			/*tr:nth-child(odd):hover + tr:nth-child(even)
+			{
+				display: block;
+			}*/
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			//console.log("hii");
+			$(document).ready(function() {
+				$("tr:nth-child(odd)").click(function () {
+					/*alert("page clicked");
+					console.log("hey");*/
+					console.log(this);
+					$(this).next().css("display", "block");
+
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+	 <center>
+	  <header>
+		<h1>
+		  HTML Quiz
+	   </h1>
+	  </header>
+	  <table>
+	  <tr>
+		<td>1. A webpage displays a picture. What tag was used to display that picture?</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <ol type="a" style="margin:0 0 0 0">
+			<li>picture</li>
+			<li>image</li>
+			<li>img</li>
+			<li>src</li>
+		 </ol>
+	   </td>
+	  </tr>
+	  <tr>
+		<td>2. &lt;b&gt; tag makes the enclosed text bold. What is other tag to make text bold?</td>
+	  </tr>
+	  <tr>
+		<td>
+		  <ol type="a">
+			<li> &lt;strong&gt;</li>
+			<li> &lt;dar&gt;</li>
+			<li> &lt;black&gt;</li>
+			<li> &lt;emp&gt;</li>
+		  </ol>
+		</td>
+	  </tr>
+	  <tr>
+		<td>3. Tags and test that are not directly displayed on the page are written in _____ section.</td>
+	  </tr>
+	  <tr>
+			  <td>
+				  <ol type="a">
+					  <li> &lt;html&gt;</li>
+					  <li> &lt;head&gt;</li>
+					  <li> &lt;title&gt;</li>
+					  <li> &lt;body&gt;</li>
+				  </ol>
+			  </td>
+	  </tr>
+		  <tr>
+
+
+		   <td>   4. Which tag inserts a line horizontally on your web page?</td></tr>
+		 <tr><td><ol type="a">
+			 <li> &lt;hr&gt; </li>
+			  <li> &lt;line&gt;</li>
+			  <li> &lt;line direction=”horizontal”&gt;</li>
+			  <li> &lt;tr&gt;</li>
+			  </ol></td></tr>
+		  <tr> <td>5. What should be the first tag in any HTML document?</td></tr>
+		  <tr><td><ol type="a">
+				<li> &lt;head&gt;</li>
+				<li> &lt;title&gt;</li>
+				<li> &lt;html&gt;</li>
+				<li> &lt;document&gt;</li></ol></td></tr>
+			<tr> <td>6. Which tag allows you to add a row in a table?</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;td&gt; and &lt;/td&gt;</li>
+				<li> &lt;cr&gt; and &lt;/cr&gt;</li>
+				<li> &lt;th&gt; and &lt;/th&gt;</li>
+				<li> &lt;tr&gt; and &lt;/tr&gt;</li></ol></td></tr>
+			<tr> <td>7. How can you make a bulleted list?</td></tr>
+		  <tr><td><ol type="a"><li> &lt;list&gt;</li>
+				<li> &lt;nl&gt;</li>
+				<li> &lt;ul&gt;</li>
+				<li> &lt;ol&gt;</li></ol></td></tr>
+			<tr> <td>8. How can you make a numbered list?</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;dl&gt;</li>
+				<li> &lt;ol&gt;</li>
+				<li> &lt;list&gt;</li>
+				<li> &lt;ul&gt;</li></ol></td></tr>
+			<tr> <td>9. How can you make an e-mail link?</td></tr>
+			<tr> <td>
+		  <ol type="a">
+				<li> &lt;a href=”xxx@yyy”&gt;</li>
+				<li> &lt;mail href=”xxx@yyy”&gt;</li>
+				<li> &lt;mail&gt;xxx@yyy&lt;/mail&gt;</li>
+				<li> &lt;a href=”mailto:xxx@yyy”&gt;</span></li></ol></td></tr>
+			<tr> <td>10. What is the correct HTML for making a hyperlink?</td></tr>
+		  <tr><td><ol type="a"><li> &lt;a href=”http:// ABC.com”&gt;ICT Trends
+						Quiz&lt;/a&gt;</li>
+				<li> &lt;a name=”http:// AB<li>com”&gt;ICT Trends Quiz&lt;/a&gt;</li>
+				<li> &lt;http:// AB<li>com&lt;/a&gt;</li>
+				<li> url=”http:// AB<li>com”&gt;ICT Trends Quiz</li></ol></td></tr>
+			<tr> <td>11. Choose the correct HTML tag to make a text italic</td></tr>
+		  <tr><td><ol type="a">  <li> &lt;ii&gt;</li>
+				<li> &lt;italics&gt;</li>
+				<li> &lt;italic&gt;</li>
+				<li> &lt;i&gt;</li></ol></td></tr>
+			<tr> <td>12. Choose the correct HTML tag to make a text bold?</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;b&gt;
+				<li> &lt;bold&gt;</li>
+				<li> &lt;bb&gt;</li>
+				<li> &lt;bld&gt;</li></ol></td></tr>
+			<tr> <td>13. What is the correct HTML for adding a background color?</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;body color=”yellow”&gt;</li>
+				<li> &lt;body bgcolor=”yellow”&gt;</li>
+				<li> &lt;background&gt;yellow&lt;/background&gt;</li>
+				<li> &lt;body background=”yellow”&gt;</li></ol></td></tr>
+			<tr> <td>14. Choose the correct HTML tag for the smallest size heading?</td></tr>
+		  <tr><td><ol type="a"><li> &lt;heading&gt;</li>
+				<li> &lt;h6&gt;
+				<li> &lt;h1&gt;</li>
+				<li> &lt;head&gt;</li></ol></td></tr>
+			<tr> <td>15. What is the correct HTML tag for inserting a line break?</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;br&gt;
+				<li> &lt;lb&gt;</li>
+				<li> &lt;break&gt;</li>
+				<li> &lt;newline&gt;</li></ol></td></tr>
+			<tr> <td>16. What does vlink attribute mean?</td></tr>
+		  <tr><td><ol type="a">  <li> visited link</li>
+				<li> virtual link</li>
+				<li> very good link</li>
+				<li> active link</li></ol></td></tr>
+			<tr> <td>17. Which attribute is used to name an element uniquely?</td></tr>
+		  <tr><td><ol type="a">   <li> class</li>
+				<li> id</li>
+				<li> dot</li>
+				<li> all of above</li></ol></td></tr>
+			<tr> <td>18. Which tag creates a check box for a form in HTML?</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;checkbox&gt;</li>
+				<li> &lt;input type=”checkbox”&gt;</li>
+				<li> &lt;input=checkbox&gt;</li>
+				<li> &lt;input checkbox&gt;</li></ol></td></tr>
+			<tr> <td>19. To create a combo box (drop down box) which tag will you use?</td></tr>
+		  <tr><td><ol type="a">  <li> &lt;select&gt;</li>
+				<li> &lt;list&gt;</li>
+				<li> &lt;input type=”dropdown”&gt;</li>
+				<li> all of above</li></ol></td></tr>
+			<tr> <td>20. Which of the following is not a pair tag?</td></tr>
+		  <tr><td><ol type="a">  <li> &lt;p&gt;</li>
+				<li> &lt; u &gt;</li>
+				<li> &lt;i&gt;</li>
+				<li> &lt;img&gt;</li></ol></td></tr>
+			<tr> <td>21. To create HTML document you require a</td></tr>
+		  <tr><td><ol type="a"> <li> web page editing software</li>
+				<li> High powered computer</li>
+				<li> Just a notepad can be used
+				<li> None of above</li></ol></td></tr>
+			<tr> <td>22. The special formatting codes in HTML document used to present content are</td></tr>
+		  <tr><td><ol type="a"> <li> tags</li>
+				<li> attributes</li>
+				<li> values</li>
+				<li> None of above</li></ol></td></tr>
+			<tr> <td>23. HTML documents are saved in</td></tr>
+		  <tr><td><ol type="a">  <li> Special binary format</li>
+				<li> Machine language codes</li>
+				<li> ASCII text
+				<li> None of above</li></ol></td></tr>
+			<tr> <td>24. Some tags enclose the text. Those tags are known as</td></tr>
+		  <tr><td><ol type="a">  <li> Couple tags</li>
+				<li> Single tags</li>
+				<li> Double tags</li>
+				<li> Pair tags</li></ol></td></tr>
+			<tr> <td>25. The _____ character tells browsers to stop tagging the text</td></tr>
+		  <tr><td><ol type="a">   <li> ?</li>
+				<li> /</li>
+				<li> &gt;</li>
+				<li> %</li></ol></td></tr>
+			<tr> <td>26. In HTML document the tags</td></tr>
+		  <tr><td><ol type="a"> <li> Should be written in upper case</li>
+				<li> should be written in lower case</li>
+				<li> should be written in proper case</li>
+				<li> can be written in both uppercase or lowercase</span></li></ol></td></tr>
+			<tr> <td>27. Marquee is a tag in HTML to</td></tr>
+		  <tr><td><ol type="a">  <li> mark the list of items to maintain inqueue</li>
+				<li> Mark the text so that it is hidden in browser</li>
+				<li> Display text with scrolling effect</li>
+				<li> None of above</li></ol></td></tr>
+			<tr> <td>28. There are ____ different of heading tags in HTML</td></tr>
+		  <tr><td><ol type="a">
+		  <li> 4</li>
+				<li> 5</li>
+				<li> 6</li>
+				<li> 7</li></ol></td></tr>
+			<tr> <td>29. To create a blank line in your web page</td></tr>
+		  <tr><td><ol type="a">
+		  <li> press Enter two times</li>
+				<li> press Shift + Enter</li>
+				<li> insert &lt;BR&gt; tag</li>
+				<li> insert &lt;BLINE&gt;</li></ol></td></tr>
+			<tr> <td>30. Which of the following is not a style tag?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;b&gt;</li>
+				<li> &lt;tt&gt;</li>
+				<li> &lt;i&gt;</li>
+				<li> All of above are style tags</span></li></ol></td></tr>
+			<tr> <td>31. The way the browser displays the object can be modified by _____</td></tr>
+		  <tr><td><ol type="a">
+		  <li> attributes</li>
+				<li> parameters</li>
+				<li> modifiers</li>
+				<li> None of above</li></ol></td></tr>
+			<tr> <td>32. Which of the following HTML code is valid?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;font colour=”red”&gt;</li>
+				<li> &lt;font color=”red”&gt;</li>
+				<li> &lt;red&gt;&lt;font&gt;</li>
+				<li> All of above are style tags</li></ol></td></tr>
+			<tr> <td>33. Which of the following is an attribute related to font tag?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> size</li>
+				<li> face</li>
+				<li> color</li>
+				<li> All of above are style tags</li></ol></td></tr>
+			<tr> <td>34. HTML supports</td></tr>
+		  <tr><td><ol type="a">
+		  <li> ordered lists</li>
+				<li> unordered lists</li>
+				<li> both type of lists</li>
+				<li> does not support those types</li></ol></td></tr>
+			<tr> <td>35. What tag is used to list individual items of an ordered list?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> LI</li>
+				<li> OL</li>
+				<li> UL</li>
+				<li> None of above</li></ol></td></tr>
+			<tr> <td>36. When should you use path along with file name of picture in IMG tag?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> path is optional and not necessary</li>
+				<li> when the location of image file and html file are different</li>
+				<li> when image file and html file both are on same location</li>
+				<li> path is always necessary when inserting image</li></ol></td></tr>
+			<tr> <td>37. Which of the following is not a valid alignment attribute?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Left</li>
+				<li> Right</li>
+				<li> Top</li>
+				<li> All of above</li></ol></td></tr>
+			<tr> <td>38. Which attribute is used with img tag to display the text if image could not load in
+					browser?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> description</li>
+				<li> name</li>
+				<li> alt</li>
+				<li> id</li></ol></td></tr>
+			<tr> <td>39. Which attribute can be used with BODY tag to set background color green?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> background=”green”</li>
+				<li> bgcolor=”green”</li>
+				<li> vlink=”green”</li>
+				<li> None of above</li></ol></td></tr>
+			<tr> <td>40. Which attribute you’ll use with TD tag to merge two cells horizontally?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> merge=colspan2</li>
+				<li> rowspan=2</li>
+				<li> colspan=2</li>
+				<li> merge=row2</li></ol></td></tr>
+			<tr> <td>41. A webpage displays a picture. What tag was used to display that picture?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> picture</li>
+				<li> mage</li>
+				<li> img</li>
+				<li> src</li></ol></td></tr>
+			<tr> <td>42. &lt;b&gt; tag makes the enclosed text bol<li> What is other tag to make text bold?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;strong&gt;</li>
+				<li> &lt;dar&gt;</li>
+				<li> &lt;black&gt;</li>
+				<li> &lt;emp&gt;</li></ol></td></tr>
+			<tr> <td>43. Tags and test that are not directly displayed on the page are written in _____ section.</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;html&gt;</li>
+				<li> &lt;head&gt;</li>
+				<li> &lt;title&gt;</li>
+				<li> &lt;body&gt;</li></ol></td></tr>
+			<tr> <td>44. Which tag inserts a line horizontally on your web page?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;hr&gt;</li>
+				<li> &lt;line&gt;</li>
+				<li> &lt;line direction=”horizontal”&gt;</li>
+				<li> &lt;tr&gt;</li></ol></td></tr>
+			<tr> <td>45. What should be the first tag in any HTML document?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;head&gt;</li>
+				<li> &lt;title&gt;</li>
+				<li> &lt;html&gt;</li>
+				<li> &lt;document&gt;</li></ol></td></tr>
+			<tr> <td>46. Which tag allows you to add a row in a table?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;td&gt; and &lt;/td&gt;</li>
+				<li> &lt;cr&gt; and &lt;/cr&gt;</li>
+				<li> &lt;th&gt; and &lt;/th&gt;</li>
+				<li> &lt;tr&gt; and &lt;/tr&gt;</li></ol></td></tr>
+			<tr> <td>47. How can you make a bulleted list?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;list&gt;</li>
+				<li> &lt;nl&gt;</li>
+				<li> &lt;ul&gt;</li>
+				<li> &lt;ol&gt;</li></ol></td></tr>
+			<tr> <td>48. How can you make a numbered list?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;dl&gt;</li>
+				<li> &lt;ol&gt;</li>
+				<li> &lt;list&gt;</li>
+				<li> &lt;ul&gt;</li></ol></td></tr>
+			<tr> <td>49. How can you make an e-mail link?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;a href=”xxx@yyy”&gt;</li>
+				<li> &lt;mail href=”xxx@yyy”&gt;</li>
+				<li> &lt;mail&gt;xxx@yyy&lt;/mail&gt;</li>
+				<li> &lt;a href=”mailto:xxx@yyy”&gt;</li></ol></td></tr>
+			<tr> <td>51. Choose the correct HTML tag to make a text italic</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;ii&gt;</li>
+				<li> &lt;italics&gt;</li>
+				<li> &lt;italic&gt;</li>
+				<li> &lt;i&gt;</li></ol></td></tr>
+			<tr> <td>52. Choose the correct HTML tag to make a text bold?</td></tr>
+		  <tr><td><ol type="a">
+		 <li> &lt;b&gt;</li>
+				<li> &lt;bold&gt;</li>
+				<li> &lt;bb&gt;</li>
+				<li> &lt;bld&gt;</li></ol></td></tr>
+			<tr> <td>53. What is the correct HTML for adding a background color?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;body color=”yellow”&gt;</li>
+				<li> &lt;body bgcolor=”yellow”&gt;</li>
+				<li> &lt;background&gt;yellow&lt;/background&gt;</li>
+				<li> &lt;body background=”yellow”&gt;</li></ol></td></tr>
+			<tr> <td>54. Choose the correct HTML tag for the smallest size heading?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;heading&gt;</li>
+				<li> &lt;h6&gt;</li>
+				<li> &lt;h1&gt;</li>
+				<li> &lt;head&gt;</li></ol></td></tr>
+			<tr> <td>55. What is the correct HTML tag for inserting a line break?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;br&gt;</li>
+				<li> &lt;lb&gt;</li>
+				<li> &lt;break&gt;</li>
+				<li> &lt;newline&gt;</li></ol></td></tr>
+			<tr> <td>56. What does vlink attribute mean?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> visited link</li>
+				<li> virtual link</li>
+				<li> very good link</li>
+				<li> active link</li></ol></td></tr>
+			<tr> <td>57. Which attribute is used to name an element uniquely?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> class</li>
+				<li> d</li>
+				<li> dot</li>
+				<li> all of above</li></ol></td></tr>
+			<tr> <td>58. Which tag creates a check box for a form in HTML?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;checkbox&gt;</li>
+				<li> &lt;input type=”checkbox”&gt;</li>
+				<li> &lt;input=checkbox&gt;</li>
+				<li> &lt;input checkbox&gt;</li></ol></td></tr>
+			<tr> <td>59. To create a combo box (drop down box) which tag will you use?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;select&gt;</li>
+				<li> &lt;list&gt;</li>
+				<li> &lt;input type=”dropdown”&gt;</li>
+				<li> all of above</li></ol></td></tr>
+			<tr> <td>60. Which of the following is not a pair tag?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;p&gt;</li>
+				<li> &lt; u &gt;</li>
+				<li> &lt;i&gt;</li>
+				<li> &lt;img&gt;</li></ol></td></tr>
+			<tr> <td>61. What is the full form of HTML?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Hyper text markup language</li>
+				<li> Hyphenation text markup language</li>
+				<li> Hyphenation test marking language</li>
+				<li> Hyper text marking language</li></ol></td></tr>
+			<tr> <td>62. What is the full form of HTTP?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Hyper text transfer protocol</li>
+				<li> Hyper text transfer package</li>
+				<li> Hyphenation text test program</li>
+				<li> none of the above</li></ol></td></tr>
+			<tr> <td>63. What is a search engine?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> a program that searches engines</li>
+				<li> a web site that searches anything</li>
+				<li> a hardware component</li>
+				<li> a machinery engine that search data</li></ol></td></tr>
+			<tr> <td>64. What is the full form of TCP/IP?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> transmission control protocol / internet protocol</li>
+				<li> telephone call protocol / international protocol</li>
+				<li> transport control protocol / internet protocol</li>
+				<li> none of the above</li></ol></td></tr>
+			<tr> <td>65. HTML document start and end with which tag pairs?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;HEAD&gt;….&lt;/HEAD&gt;</li>
+				<li> &lt;BODY&gt;….&lt;/BODY&gt;</li>
+				<li> &lt;HTML&gt;….&lt;/HTML&gt;</li>
+				<li> &lt;WEB&gt;….&lt;/WEB&gt;</li></ol></td></tr>
+			<tr> <td>66. Which tag is used to create body text in HTML?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;HEAD&gt;</li>
+				<li> &lt;TEXT&gt;</li>
+				<li> &lt;TITLE&gt;</li>
+				<li> &lt;BODY&gt;</li></ol></td></tr>
+			<tr> <td>67. “Yahoo”, “Infoseek” and “Lycos” are _________?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Search Engines</li>
+				<li> Browsers</li>
+				<li> News groups</li>
+				<li> None of the above</li></ol></td></tr>
+			<tr> <td>68. What does the .com domain represents?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Education domain</li>
+				<li> Commercial domain</li>
+				<li> Network</li>
+				<li> None of the above</li></ol></td></tr>
+			<tr> <td>69. In Satellite based communication, VSAT stands for?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Very Small Aperture Terminal</li>
+				<li> Varying Size Aperture Terminal</li>
+				<li> Very Small Analog Terminal</li>
+				<li> None of the above</li></ol></td></tr>
+			<tr> <td>70. Outlook Express is a _________</td></tr>
+		  <tr><td><ol type="a">
+		  <li> E-Mail Client</li>
+				<li> Browser</li>
+				<li> Search Engine</li>
+				<li> None of the above</li></ol></td></tr>
+			<tr> <td>71. &lt;TITLE&gt; … &lt;/TITLE&gt; tag must be within ________</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Title</li>
+				<li> Form</li>
+				<li> Header</li>
+				<li> Body</li></ol></td></tr>
+			<tr> <td>72. Text within &lt;EM&gt; … &lt;/EM&gt; tag is displayed as ________</td></tr>
+		  <tr><td><ol type="a">
+		  <li> bold</li>
+				<li> italic</li>
+				<li> list</li>
+				<li> indented</li></ol></td></tr>
+			<tr> <td>73. Text within &lt;STRONG&gt; … &lt;/STRONG&gt; tag is displayed as ________</td></tr>
+		  <tr><td><ol type="a">
+		  <li> bold</li>
+				<li> italic</li>
+				<li> list</li>
+				<li> indented</li></ol></td></tr>
+			<tr> <td>74. &lt;UL&gt; … &lt;/UL&gt; tag is used to ________</td></tr>
+		  <tr><td><ol type="a">
+		  <li> display the numbered list</li>
+				<li> underline the text</li>
+				<li> display the bulleted list</li>
+				<li> bold the text</li></ol></td></tr>
+			<tr> <td>75. Which tag is used to display the numbered list?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;OL&gt;&lt;/OL&gt;</li>
+				<li> &lt;DL&gt;&lt;/DL&gt;</li>
+				<li> &lt;UL&gt;&lt;/UL&gt;</li>
+				<li> &lt;LI&gt;&lt;/LI&gt;</li></ol></td></tr>
+			<tr> <td>76. Which tag is used to display the large font size?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;LARGE&gt;&lt;/LARGE&gt;</li>
+				<li> &lt;BIG&gt;&lt;/BIG&gt;</li>
+				<li> &lt; SIZE &gt;&lt;/SIZE&gt;</li>
+				<li> &lt;FONT&gt;&lt;/FONT&gt;</li></ol></td></tr>
+			<tr> <td>77. &lt;SCRIPT&gt; … &lt;/SCRIPT&gt; tag can be placed within ________</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Header</li>
+				<li> Body</li>
+				<li> both A and B</li>
+				<li> none of the above</li></ol></td></tr>
+			<tr> <td>78. using &lt;P&gt; tag will</td></tr>
+		  <tr><td><ol type="a">
+		  <li> start a new paragraph</li>
+				<li> break the line</li>
+				<li> end the current paragraph</li>
+				<li> none of the above</li></ol></td></tr>
+			<tr> <td>79. &lt;TD&gt; … &lt;/TD&gt; tag is used for ________</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Table heading</li>
+				<li> Table Records</li>
+				<li> Table row</li>
+				<li> none of the above</li></ol></td></tr>
+			<tr> <td>80. Which is true to change the text color to red?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;BODY BGCOLOR=RED&gt;</li>
+				<li> &lt;BODY TEXT=RED&gt;</li>
+				<li> &lt;BODY COLOR=RED&gt;</li>
+				<li> none of the above</li></ol></td></tr>
+			<tr> <td>81. With regards to e-mail addresses:</td></tr>
+		  <tr><td><ol type="a">
+		  <li> hey must always contain an @ symbol</li>
+				<li> hey can never contain spaces</li>
+				<li> they are case-insensitive</li>
+				<li> all of the above</li></ol></td></tr>
+			<tr> <td>82. A homepage is __________</td></tr>
+		  <tr><td><ol type="a">
+		  <li> an index of encyclopedia articles</li>
+				<li> where all Internet data is stored</li>
+				<li> required for access to the Internet</li>
+				<li> the first page of a website</li></ol></td></tr>
+			<tr> <td>83. Which of the following is used to explore the Internet?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Browser</li>
+				<li> Spreadsheet</li>
+				<li> Clipboard</li>
+				<li> Draw</li></ol></td></tr>
+			<tr> <td>84. What is Internet Explorer?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> An Icon</li>
+				<li> A File Manager</li>
+				<li> A Browser</li>
+				<li> The Internet</li></ol></td></tr>
+			<tr> <td>85. What do I need to get onto the Internet?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Computer</li>
+				<li> Modem</li>
+				<li> Browser</li>
+				<li> All of the above</li></ol></td></tr>
+			<tr> <td>86. What is an ISP?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> nternet System Protocol</li>
+				<li> nternal System Program</li>
+				<li> Internet Service Provider</li>
+				<li> None of the above</li></ol></td></tr>
+			<tr> <td>87. Which of the following is valid IP address?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> 984.12.787.76</li>
+				<li> 192.168.321.10</li>
+				<li> 1.888.234.3456</li>
+				<li> 192.168.56.115</li></ol></td></tr>
+			<tr> <td>88. Which is not a domain name extension</td></tr>
+		  <tr><td><ol type="a">
+		  <li> mil</li>
+				<li> org</li>
+				<li> .int</li>
+				<li> .com</li></ol></td></tr>
+			<tr> <td>89. What is a FTP program used for?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Transfer files to and from an Internet Server</li>
+				<li> Designing a website</li>
+				<li> Connecting to the internet</li>
+				<li> None of the above</li></ol></td></tr>
+			<tr> <td>90. Which of the following are commonly found on web pages?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> internet</li>
+				<li> hyperlinks</li>
+				<li> intranet</li>
+				<li> all of the above</li></ol></td></tr>
+			<tr> <td>91. What is the correct syntax in HTML for creating a link on a webpage?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;LINK SRC= “AB<li>html”&gt;</li>
+				<li> &lt;BODY LINK = “AB<li>html”&gt;</li>
+				<li> &lt;A SRC = “AB<li>html” &gt;</li>
+				<li> &lt; A HREF = “AB<li>html”&gt;</li></ol></td></tr>
+			<tr> <td>92. Which of the following is an attribute of &lt;Table&gt; tag?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> SRC</li>
+				<li> LINK</li>
+				<li> CELLPADDING</li>
+				<li> BOLD</li></ol></td></tr>
+			<tr> <td>93. Choose the correct HTML tag to make the text bold?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;B&gt;</li>
+				<li> &lt;BOLD&gt;</li>
+				<li> &lt;STRONG&gt;</li>
+				<li> Both A) and C)</li></ol></td></tr>
+			<tr> <td>94. Which HTML tag would be used to display power in expression (A+B)2 ?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;SUP&gt;</li>
+				<li> &lt;SUB&gt;</li>
+				<li> &lt;B&gt;</li>
+				<li> &lt;P&gt;</li></ol></td></tr>
+			<tr> <td>95. Choose the correct HTML code to create an email link?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;A HREF = “admin@AB<li>com”&gt;&lt;/A&gt;</li>
+				<li> &lt;A HREF = “admin:suresh@AB<li>com”&gt;&lt;/A&gt;</li>
+				<li> &lt;MAIL&gt;admin@AB<li>com &lt;/MAIL&gt;</li>
+				<li> MAILHREF = “admin@AB<li>com”&gt;</li></ol></td></tr>
+			<tr> <td>96. Choose the correct HTML tag for the largest heading?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;H1&gt;</li>
+				<li> &lt;H6&gt;</li>
+				<li> &lt;H10&gt;</li>
+				<li> &lt;HEAD&gt;</li></ol></td></tr>
+			<tr> <td>97. Output of XML document can be viewed in a</td></tr>
+		  <tr><td><ol type="a">
+		  <li> Word Processor</li>
+				<li> Web browser</li>
+				<li> Notepad</li>
+				<li> None of the above</li></ol></td></tr>
+			<tr> <td>98. What is the correct way of describing XML data?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> XML uses a DTD to describe data</li>
+				<li> XML uses a description node to describe data</li>
+				<li> XML uses XSL to describe the data</li>
+				<li> XML uses a validator to describe the data</li></ol></td></tr>
+			<tr> <td>99. Comments in XML document is given by:</td></tr>
+		  <tr><td><ol type="a">
+		  <li> &lt;?– _ _–&gt;</li>
+				<li> &lt;!_ _ _ _!&gt;</li>
+				<li> &lt;!_ _ _ _&gt;</li>
+				<li> &lt;/_ _ _ _&gt;</li></ol></td></tr>
+			<tr> <td>100. Which statement is true?</td></tr>
+		  <tr><td><ol type="a">
+		  <li> An XML document can have one root element</li>
+				<li> An XML document can have one child element</li>
+				<li> XML elements have to be in lower case</li>
+				<li> All of the above</li></ol></td></tr>
+			<tr> <td>102. In HTML, Uniform Resource Identifier (URI) is used to</td></tr>
+		  <tr><td><ol type="a">
+			<li> To create a frame document .</li>
+			<li> To create a image map in the webpage.</li>
+		   <li> To customize the image in the webpage.</li>
+		   <li> To identify a name or a resource on the internet.</li></ol></td></tr>
+			<tr> <td>103. CSS is an acronym for</td></tr>
+		  <tr><td><ol type="a"> <li> Cascading Style Sheet</li>
+		   <li> Costume Style Sheet</li>
+		   <li> Cascading System Style</li>
+		   <li> None of the Above</li></ol></td></tr>
+			<tr> <td>104. Which of the following protocol is not used in the Internet</td></tr>
+		  <tr><td><ol type="a"><li> Telnet</li>
+		   <li> WIRL</li>
+		   <li> HTTP</li>
+		   <li> Gopher</li></ol></td></tr>
+			<tr> <td>105. Who invented World Wide Web (WWW)?</td></tr>
+		  <tr><td><ol type="a"> <li> Blaise Pascal</li>
+		   <li> Charles Babbage</li>
+		   <li> Herman Hollerith</li>
+		   <li> Tim Berners-Lee</li></ol></td></tr>
+			<tr> <td>106. What is the use of Web Font in HTML ?</td></tr>
+		  <tr><td><ol type="a"><li> that is the core font that is use to develop Web Pages.</li>
+		   <li> that enables to use fonts over the Web without installation.</li>
+		   <li> that is the special font that developed by Microsoft Corp.</li>
+		   <li> All of the Above.</li></ol></td></tr>
+			<tr> <td>107. What is &lt;tt&gt; tag in HTML?</td></tr>
+		  <tr><td><ol type="a"> <li> It renders fonts as teletype text font style.</li>
+		   <li> It renders fonts as truetype text font style.</li>
+		   <li> It renders fonts as truncate text font style.</li>
+		   <li> None of the Above.</li></ol></td></tr>
+			<tr> <td>108. What is the use of Forms in HTML?</td></tr>
+		  <tr><td><ol type="a">  <li> to display contents of email.</li>
+		   <li> to display animation effect.</li>
+		   <li> to collect user’s input.</li>
+		   <li> None of the Above.</li></ol></td></tr>
+			<tr> <td>109. What is the use of iframe in HTML?</td></tr>
+		  <tr><td><ol type="a"> <li> to display a web page within a web page.</li>
+		   <li> to display a web page with animation effect.</li>
+		   <li> to display a web page without browser.</li>
+		   <li> All of the Above.</li></ol></td></tr>
+			<tr> <td>110. FTP is an acronym for</td></tr>
+		  <tr><td><ol type="a"><li> File Transaction Protocol</li>
+		   <li> File Transmission Protocol</li>
+		   <li> File Translation Protocol</li>
+		   <li> File Transfer Protocol</li></ol></td></tr>
+			<tr> <td>111. Which HTML Tag will use to scroll a text in web page?</td></tr>
+		  <tr><td><ol type="a">  <li> &lt;marquee&gt; … &lt;/marquee&gt;</li>
+		   <li> &lt;scroll&gt; … &lt;/scroll&gt;</li>
+		   <li> &lt;round&gt; … &lt;/round&gt;</li>
+		   <li> &lt;go&gt; … &lt;/go&gt;</li></ol></td></tr>
+			<tr> <td>112. Which organization defines the Web Standards?</td></tr>
+		  <tr><td><ol type="a"><li> Microsoft Corporation </li>
+		   <li> IBM Corporation</li>
+		   <li> World Wide Web Consortium</li>
+		   <li> Apple In</li></ol></td></tr>
+			<tr> <td>113. How to set a picture as a background web page?</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;body background= “bgimage.gif”&gt;</li>
+		   <li> &lt;body background image= “bgimage.gif”&gt;</li>
+		   <li> &lt;background= “bgimage.gif”&gt;</li>
+		   <li> &lt;background image= “bgimage.gif”&gt;</li></ol></td></tr>
+			<tr> <td>114. Which of following HTML Tag will inserting a line break?</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;p /&gt;</li>
+		   <li> &lt;lb /&gt;</li>
+		   <li> &lt;br /&gt;</li>
+		   <li> &lt;break /&gt;</li></ol></td></tr>
+			<tr> <td>115. Which of the following tags are related to Table in HTML ?</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;table&gt; &lt;row&gt; &lt;column&gt;</li>
+		   <li> &lt;table&gt; &lt;tr&gt; &lt;td&gt;</li>
+		   <li> &lt;table&gt; &lt;head&gt; &lt;body&gt;</li>
+		   <li> &lt;table&gt; &lt;header&gt; &lt;footer&gt;</li></ol></td></tr>
+			<tr> <td>116. Which of the following is correct HTML for inserting an image?</td></tr>
+		  <tr><td><ol type="a"><li> &lt;image source= “www.AB<li>com/admin.jpg” alt= “This is me” /&gt;</li>
+		   <li> &lt;img src= “www.AB<li>com/admin.jpg” alt= “This is me” /&gt;</li>
+		   <li> &lt;img source= “www.AB<li>com/admin.jpg” alt= “This is me” /&gt;</li>
+		   <li> &lt;img alt= “This is me”&gt;www.AB<li>com/admin.jpg</li></ol></td></tr>
+			<tr> <td>117. Choose the correct HTML tag to left-align the content of a cell.</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;tdleft&gt;</li>
+		   <li> &lt;td leftalign&gt;</li>
+		   <li> valign= “left”&gt;</li>
+		   <li> &lt;td align= “left”&gt;</li></ol></td></tr>
+			<tr> <td>118. Which tag is used to lists the items with bullets?</td></tr>
+		  <tr><td><ol type="a"><li> &lt;bullet&gt;…&lt;/bullet&gt;</li>
+		   <li> &lt;list&gt;…&lt;/list&gt;</li>
+		   <li> &lt;ul&gt;…</li>
+		   <li> &lt;ol&gt;…&lt;/ol&gt;</li></ol></td></tr>
+			<tr> <td>119. Is it possible to insert a table within another table?</td></tr>
+		  <tr><td><ol type="a"> <li> Yes, but there must be exactly 2 rows and 2 columns in first table.</li>
+		   <li> Yes, table can be inserted into cell of another table.</li>
+		   <li> Yes, but there must be no border in second table.</li>
+		   <li> No, it’s not possible.</li></ol></td></tr>
+			<tr> <td>120. What is the usage of alt value in &lt;img&gt; tag?</td></tr>
+		  <tr><td><ol type="a"><li> Alternative text for an Image</li>
+		   <li> Alternative source of an Image</li>
+		   <li> Caption of an Image</li>
+		   <li> All of above</li></ol></td></tr>
+			<tr> <td>121. Which of the following is the correct regarding meta tag in HTML?</td></tr>
+		  <tr><td><ol type="a"><li> &lt;meta&gt; … &lt;/meta&gt;</li>
+		   <li> &lt;meta name = ” ” /&gt;</li>
+		   <li> &lt;metadata&gt; … &lt;/metadata&gt;</li>
+		   <li> &lt;metadata name = ” ” /&gt;</li></ol></td></tr>
+			<tr> <td>122. Which of the following is correct to set “Black” color as Background of page?</td></tr>
+		  <tr><td><ol type="a"> <li> bgcolor = “#000000”&gt;</li>
+		   <li> &lt;body background = “#000000”&gt;</li>
+		   <li> &lt;body Background color = “#000000”&gt;</li>
+		   <li> All of Above</li></ol></td></tr>
+			<tr> <td>123. Which of the following is correct to align H1 tag to Right Alignment</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;h1 align = “right”&gt; …</li>
+		   <li> &lt;h1 alignment = “right”&gt; …</li>
+		   <li> &lt;h1 tag align = “right”&gt; … &lt;/h1&gt;</li>
+		   <li> H1 cannot make Right Alignment</li></ol></td></tr>
+			<tr> <td>124. Which of the following is correct to change font face in Web Page</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;font = “font name”&gt; …</li>
+		   <li> &lt;font name = “font name”&gt; … &lt;/font&gt;</li>
+		   <li> &lt;font face = “font name”&gt; … &lt;/font&gt;</li>
+		   <li> Font Face cannot change</li></ol></td></tr>
+			<tr> <td>125. Which of the following is incorrect regarding Logical styles?</td></tr>
+		  <tr><td><ol type="a"> <li> Code looks like teletype</li>
+		   <li> Sample looks like teletype</li>
+		   <li> Keyboard looks like teletype</li>
+		   <li> Variable looks like teletype</li></ol></td></tr>
+			<tr> <td>126. Which of the following is correct character entities for “Copyright” symbol?</td></tr>
+		  <tr><td><ol type="a"> <li> &amp;#149;</li>
+		   <li> &amp;#159;</li>
+		   <li> &amp;#169;</li>
+		   <li> &amp;#179;</li></ol></td></tr>
+			<tr> <td>127. Which tag is used to display Preformatted texts?</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;pre&gt; … &lt;/ pre&gt;</li>
+		   <li> &lt;prefor&gt; … &lt;/ prefor&gt;</li>
+		   <li> &lt;pre text&gt; … &lt;/ pre text&gt;</li>
+		   <li> &lt;pre format&gt; … &lt;/ pre format&gt;</li></ol></td></tr>
+			<tr> <td>128. Which is the correct to create an Arabic numeral list</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;ul type=”1?&gt;</li>
+		   <li> &lt;ol type=”1?&gt;</li>
+		   <li> &lt;il type=”1?&gt;</li>
+		   <li> &lt;li type=”1?&gt;</li></ol></td></tr>
+			<tr> <td>129. How to add alternative text for an Image?</td></tr>
+		  <tr><td><ol type="a"><li> &lt;img src = “http://www.AB<li>com/bran<li>png” alternate = “Brand of website” /&gt;</li>
+		   <li> &lt;img src = “http://www.AB<li>com/bran<li>png” alt text = “Brand of website” /&gt;</li>
+		   <li> src = “http://www.AB<li>com/bran<li>png” alternate text = “Brand of website” /&gt;</li>
+		   <li> src = “http://www.AB<li>com/bran<li>png” alt = “Brand of website” /&gt;</li></ol></td></tr>
+			<tr> <td>130. How to embedded Audio Files in HTML?</td></tr>
+		  <tr><td><ol type="a">  <li> src = “mysong.mid” width = “100” height = “15”&gt;</li>
+		   <li> &lt;embed sound = “mysong.mid” width = “100” height = “15”&gt;</li>
+		   <li> &lt;embed audio = “mysong.mid” width = “100” height = “15”&gt;</li>
+		   <li> &lt;embed music = “mysong.mid” width = “100” height = “15”&gt;</li></ol></td></tr>
+			<tr> <td>131. Which of the following is used to create web pages?</td></tr>
+		  <tr><td><ol type="a">  <li> HTML</li>
+		   <li> C</li>
+		   <li> JVM</li>
+		   <li> DTD</li></ol></td></tr>
+			<tr> <td>132. HTML is considered as ___ language</td></tr>
+		  <tr><td><ol type="a">  <li> Programming Langauge</li>
+		   <li> OOP Language</li>
+		   <li> High Level Language</li>
+		   <li> Markup Language</li></ol></td></tr>
+			<tr> <td>133. HTML language is a set of markup ___</td></tr>
+		  <tr><td><ol type="a"> <li> Attributes</li>
+		   <li> Tags</li>
+		   <li> Sets</li>
+		   <li> Groups</li></ol></td></tr>
+			<tr> <td>134. HTML tags are used to describe document ____</td></tr>
+		  <tr><td><ol type="a"> <li> Definition</li>
+		   <li> Language</li>
+		   <li> Content</li>
+		   <li> None of these</li></ol></td></tr>
+			<tr> <td>135. HTML document can contain</td></tr>
+		  <tr><td><ol type="a"> <li> Attributes</li>
+		   <li> Tags</li>
+		   <li> Plain text</li>
+		   <li> All of these</li></ol></td></tr>
+			<tr> <td>136. Page designed in HTML is called a</td></tr>
+		  <tr><td><ol type="a">  <li> Yellow Page</li>
+		   <li> Web Page</li>
+		   <li> Server Page</li>
+		   <li> Front Page</li></ol></td></tr>
+			<tr> <td>137. We can write HTML code using ____. Select appropriate option(s).</td></tr>
+		  <tr><td><ol type="a"><li> VLC Media</li>
+		   <li> Notepad++</li>
+		   <li> Microsoft PowerPoint</li>
+		   <li> None of these</li></ol></td></tr>
+			<tr> <td>138. HTML document is saved using ____ extension.</td></tr>
+		  <tr><td><ol type="a"> <li> .htl</li>
+		   <li> .html</li>
+		   <li> .hml</li>
+			  <li> .htnl</li></ol></td></tr>
+			<tr> <td>139. The software that can read and render HTML documents is</td></tr>
+		  <tr><td><ol type="a"><li> Server</li>
+		   <li> Compiler</li>
+		   <li> Interpreter</li>
+		   <li> Browser</li></ol></td></tr>
+			<tr> <td>140. PCs running Windows 3.x will have ____extension for html pages</td></tr>
+		  <tr><td><ol type="a"><li> .htl</li>
+		   <li> .html</li>
+		   <li> .htm</li>
+		   <li> .hml</li></ol></td></tr>
+			<tr> <td>141. Which of the following is not an example of browser?</td></tr>
+		  <tr><td><ol type="a"><li> Netscape Navigator</li>
+		   <li> Microsoft Bing</li>
+		   <li> Mozilla Firefox</li>
+		   <li> Opera</li></ol></td></tr>
+			<tr> <td>142. Who is the primary author of HTML?</td></tr>
+		  <tr><td><ol type="a"> <li> Brendan Eich</li>
+		   <li> Tim Berners-Lee</li>
+		   <li> Web Programmer</li>
+		   <li> Google Inc</li></ol></td></tr>
+			<tr> <td>143. HTML was first proposed in year ___.</td></tr>
+		  <tr><td><ol type="a"><li> 1980</li>
+		   <li> 1990</li>
+		   <li> 1995</li>>
+		   <li> 2000</li></ol></td></tr>
+			<tr> <td>144. HTML tags are surrounded by ___ brackets</td></tr>
+		  <tr><td><ol type="a">  <li> Angle</li>
+		   <li> Square</li>
+		   <li> Round</li>
+		   <li> Curly</li></ol></td></tr>
+			<tr> <td>145. Opening tag of HTML is called</td></tr>
+		  <tr><td><ol type="a">  <li> Ending tag</li>
+		   <li> Starting tag</li>
+		   <li> Closed tag</li>
+		   <li> Pair tags</li></ol></td></tr>
+			<tr> <td>146. HTML document contain one root tag called ____</td></tr>
+		  <tr><td><ol type="a">  <li> HEAD</li>
+		   <li> Title</li>
+		   <li> Body</li>
+		   <li> HTML</li></ol></td></tr>
+			<tr> <td>147. Basic fundamental block is called as ___</td></tr>
+		  <tr><td><ol type="a"> <li> HTML tag</li>
+		   <li> HTML body</li>
+		   <li> HTML Attribute</li>
+		   <li> HTML Element</li></ol></td></tr>
+			<tr> <td>148. Pick the odd out</td></tr>
+		  <tr><td><ol type="a"> <li> Table</li>
+		   <li> TR</li>
+		   <li> TD</li>
+		   <li> Form</li></ol></td></tr>
+			<tr> <td>149. The first page of a website is called</td></tr>
+		  <tr><td><ol type="a"> <li> Design</li>
+		   <li> Home page</li>
+		   <li> First page</li>
+		   <li> Main page</li></ol></td></tr>
+			<tr> <td>150. The version of HTML is</td></tr>
+		  <tr><td><ol type="a"> <li> HTML0</li>
+		   <li> HTML1</li>
+		   <li> HTML2</li>
+		   <li> All of these</li></ol></td></tr>
+			<tr> <td>151. Head tag is used for?</td></tr>
+		  <tr><td><ol type="a"> <li> Writing style</li>
+		   <li> Writing Java Script</li>
+		   <li> Including CSS, JS Files</li>
+		   <li> All of these</li></ol></td></tr>
+			<tr> <td>152. How many heading tags are supported by HTML?</td></tr>
+		  <tr><td><ol type="a"> <li> 3</li>
+		   <li> 4</li>
+		   <li> 5</li>
+		   <li> 6</li></ol></td></tr>
+			<tr> <td>153. Which is the largest heading tag?</td></tr>
+		  <tr><td><ol type="a"> <li> H1</li>
+		   <li> H3</li>
+		   <li> H4</li>
+		   <li> H6</li></ol></td></tr>
+			<tr> <td>154. Which of the following are attributes of Font tag?</td></tr>
+		  <tr><td><ol type="a"> <li> Face</li>
+		   <li> Size</li>
+		   <li> Color</li>
+		   <li> All of above</li></ol></td></tr>
+			<tr> <td>155. ……………………. connects web pages.</td></tr>
+		  <tr><td><ol type="a"> <li> Connector</li>
+		   <li> Link</li>
+		   <li> Hyperlink</li>
+		   <li> None of the above</li></ol></td></tr>
+			<tr> <td>156. Internet is ………………………….</td></tr>
+		  <tr><td><ol type="a"> <li> a network of networks</li>
+		   <li> an ocean of resources waiting to be mined</li>
+		   <li> a cooperative anarchy</li>
+		   <li> all of the above</li></ol></td></tr>
+			<tr> <td>157. ……………… is suitable for remote administration of a computer.</td></tr>
+		  <tr><td><ol type="a"> <li> FTP</li>
+		   <li> Shell</li>
+		   <li> Remote Procedure Call</li>
+		   <li> Telnet</li></ol></td></tr>
+			<tr> <td>158. Title tag is nested within the ………………….. tag.</td></tr>
+		  <tr><td><ol type="a"> <li> Body</li>
+		   <li> Head</li>
+		   <li> List</li>
+		   <li> Table</li></ol></td></tr>
+			<tr> <td>159. ……………….. is a web’s native protocol.</td></tr>
+		  <tr><td><ol type="a"> <li> SLIP</li>
+		   <li> TCP/IP</li>
+		   <li> HTTP</li>
+		   <li> PPP</li></ol></td></tr>
+			<tr> <td>160. The Internet uses the …………………… as the protocol engine.</td></tr>
+		  <tr><td><ol type="a"> <li> SLIP</li>
+		   <li> HTTP</li>
+		   <li> TCP/IP</li>
+		   <li> PPP</li></ol></td></tr>
+			<tr> <td>161. A ……………………….. is a symbolic name a network administrator assigns to a machine.</td></tr>
+		  <tr><td><ol type="a"> <li> URL</li>
+		   <li> DNS</li>
+		   <li> IP address</li>
+		   <li> Host name</li></ol></td></tr>
+			<tr> <td>162. Which of the following protocol is used for e-mail services.</td></tr>
+		  <tr><td><ol type="a"> <li> SMAP</li>
+		   <li> SMTP</li>
+		   <li> SMIP</li>
+		   <li> SMOP</li></ol></td></tr>
+			<tr> <td>163. …………………. is the incoming e-mail server.</td></tr>
+		  <tr><td><ol type="a"> <li> POP</li>
+		   <li> SMTP</li>
+		   <li> SMIP</li>
+		   <li> PPP</li></ol></td></tr>
+			<tr> <td>164. ………………….. is a uniform naming scheme for locating resources on the web.</td></tr>
+		  <tr><td><ol type="a"><li> URI</li>
+		   <li> HTTP</li>
+		   <li> WEBNAME</li>
+		   <li> RESOURCENAME</li></ol></td></tr>
+			<tr> <td>165. The attribute ……………… of &lt;BODY&gt; tag sets color of hypertext links.</td></tr>
+		  <tr><td><ol type="a"><li> link</li>
+		   <li> vlink</li>
+		   <li> alink</li>
+		   <li> hlink</li></ol></td></tr>
+			<tr> <td>166. Default font size of HTML is …………………..</td></tr>
+		  <tr><td><ol type="a"><li> 2</li>
+		   <li> 4</li>
+		   <li> 6</li>
+		   <li> 3</li></ol></td></tr>
+			<tr> <td>167. This is a networking device that passes data between networks having similar functions but
+					dissimilar implementations.</td></tr>
+		  <tr><td><ol type="a"> <li> Hub</li>
+		   <li> Modem</li>
+		   <li> Gateway</li>
+		   <li> Repeater</li></ol></td></tr>
+			<tr> <td>168. In order to connect to ISP’s server you need …….</td></tr>
+		  <tr><td><ol type="a"><li> Hand gloves</li>
+		   <li> Printer</li>
+		   <li> User name and Password</li>>
+		   <li> None of the above</li></ol></td></tr>
+			<tr> <td>169. DNS translates ………</td></tr>
+		  <tr><td><ol type="a"> <li> domain name into IP</li>
+		   <li> IP into domain name</li>
+		   <li> both a &amp; b</li>
+		   <li> domain name into physical address</li></ol></td></tr>
+			<tr> <td>170. In order to upload a HTML file to a web server, you use</td></tr>
+		  <tr><td><ol type="a"> <li> HTTP</li>
+		   <li> SMTP</li>
+		   <li> SIP</li>
+		   <li> FTP</li>
+			<tr> <td>171. IEEE stands for ……..</td></tr>
+		  <tr><td><ol type="a"><li> Institute of estimated elevator efficiency</li>
+		   <li> Institute of electrical and economical engineers</li>
+		   <li> Institute of Eurasia engineering event</li>
+		   <li> Institute of electrical and electronics engineers</li></ol></td></tr>
+			<tr> <td>172. The regional networks are connected to the corporate networks, this is also called as ……..
+			</td></tr>
+		  <tr><td><ol type="a"> <li> Backbone</li>
+		   <li> LAN COM</li>
+		   <li> WAN COM</li>
+		   <li> Intranet</li></ol></td></tr>
+			<tr> <td>173. Once the email is sent, the message is broken into pieces called ………………</td></tr>
+		  <tr><td><ol type="a"> <li> Packets</li>
+		   <li> Process</li>
+		   <li> Digits</li>
+			  <li> Bytes</li></ol></td></tr>
+			<tr> <td>174. ………………. is known as father of World Wide We</td></tr>
+		  <tr><td><ol type="a"> <li> Robert Cailliau</li>
+		   <li> Tim Thompson</li>
+		   <li> Charles Darwin</li>
+		   <li> Tim Berners-Lee</li></ol></td></tr>
+			<tr> <td>175. ……………. are the physical meeting points of backbones.</td></tr>
+		  <tr><td><ol type="a"><li> Gateways</li>
+		   <li> Pathways</li>
+		   <li> Routers</li>
+		   <li> Domains</li></ol></td></tr>
+			<tr> <td>176. WSFTP is an example of ……………………… program.</td></tr>
+		  <tr><td><ol type="a"> <li> FTP</li>
+		   <li> Telnet</li>
+		   <li> Web browser</li>
+		   <li> Mail</li></ol></td></tr>
+			<tr> <td>177. Which of the following is best suitable for remote administration of a computer?</td></tr>
+		  <tr><td><ol type="a"> <li> Telnet</li>
+		   <li> WAIS</li>
+		   <li> Browsers</li>
+		   <li> HTML</li></ol></td></tr>
+			<tr> <td>178. The leading bit pattern of class B network is ………………</td></tr>
+		  <tr><td><ol type="a"> <li> 0</li>
+		   <li> 10</li>
+		   <li> 110</li>
+		   <li> 11</li></ol></td></tr>
+			<tr> <td>179. The …………………. attribute adds space within each cell.</td></tr>
+		  <tr><td><ol type="a"> <li> CELL SPACING</li>
+		   <li> CELL PADDING</li>
+		   <li> WIDTH</li>
+		   <li> ALIGN</li></ol></td></tr>
+			<tr> <td>180. Which of the following are two popular protocols that allow home computer users to connect their
+					computers to the internet as per hosts? i) SLIP ii) PPPiii) HTTP iv) SMTP</td></tr>
+		  <tr><td><ol type="a"><li> iii and iv</li>
+		   <li> ii and iii</li>
+		   <li> i and ii</li>
+		   <li> ii and iii</li></ol></td></tr>
+			<tr> <td>181. A computer that translates …………………… of another computer into an …………… and vice versa, upon request
+					is known as DNS server.</td></tr>
+		  <tr><td><ol type="a"> <li> Domain name and IP address</li>
+		   <li> Host address and Domain name</li>
+		   <li> Domain name and server address</li>
+			  <li> Server name and IP address</li></ol></td></tr>
+			<tr> <td>182. Identify the uses of URI in HTML.: i) Link to another document or resource ii) Link to external
+					style sheet or script iii) Create an image map</td></tr>
+		  <tr><td><ol type="a"> <li> i and ii</li>
+		   <li> i and iii</li>
+		   <li> ii and iii</li>
+		   <li> i , ii and iii</li></ol></td></tr>
+			<tr> <td>183. An ordered list is a …………………. list and an unordered list is a …………….. list.</td></tr>
+		  <tr><td><ol type="a"> <li> bulleted &amp; numbered</li>
+		   <li> bulleted &amp; tabular</li>
+		   <li> tabular &amp; numbered</li>
+		   <li> numbered &amp; bulleted</li></ol></td></tr>
+			<tr> <td>184. Linking to another place in the same or another web page requires two A (Anchor) tags, the first
+					with the ……………… attribute and the second the ……………….attribute.</td></tr>
+		  <tr><td><ol type="a"> <li> NAME &amp; LINK</li>
+		   <li> LINK &amp; HREF</li>
+		   <li> HREF &amp; NAME</li>
+		   <li> TARGET &amp; VALUE</li></ol></td></tr>
+			<tr> <td>185. What type of information should you avoid including on your Web site?</td></tr>
+		  <tr><td><ol type="a"> <li> Links to sites of interest</li>
+		   <li> Private personal information</li>
+		   <li> Work and academic experience</li>
+		   <li> Graphical</li></ol></td></tr>
+			<tr> <td>186. Which of the following web elements should you know about before building your web site?
+			</td></tr>
+		  <tr><td><ol type="a"><li> The web audience</li>
+		   <li> The operating environment of your ISP</li>
+			  <li> The operating system of your visitor</li>
+		   <li> Each consideration should determine your web design choices</li></ol></td></tr>
+			<tr> <td>187. What is the language of the Web?</td></tr>
+		  <tr><td><ol type="a"> <li> Basic</li>
+		   <li> C++</li>
+		   <li> MS Visual Basic</li>
+		   <li> HTML</li></ol></td></tr>
+			<tr> <td>188. What does an HTML tag do?</td></tr>
+		  <tr><td><ol type="a"> <li> It specifies formatting and layout instructions for your web page.</li>
+		   <li> It hides programming instructions from view.</li>
+		   <li> It determines the organizational structure of your Web site.</li>
+		   <li> It connects your web site to an operating environment.</li></ol></td></tr>
+			<tr> <td>189. A Web document is broken into sections. What are the tags called that create these
+					sections?</td></tr>
+		  <tr><td><ol type="a"> <li> Structure tags</li>
+		   <li> HTML tags</li>
+		   <li> Heading tags</li>
+		   <li> Body tags</li></ol></td></tr>
+			<tr> <td>190. What should be the first and last pair of tags in your Web document?</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;html&gt;&lt;/html&gt; and &lt;body&gt;&lt;/body&gt;</li>
+		   <li> &lt;start&gt;&lt;end&gt; and &lt;body&gt;&lt;/body&gt;</li>
+		   <li> &lt;head&gt;&lt;body&gt; and &lt;title&gt;&lt;/title&gt;</li>
+		   <li> &lt;title&gt;&lt;/title&gt; and &lt;body&lt;&gt;/body&gt;</li></ol></td></tr>
+			<tr> <td>191. When you use a heading tag in a document, what does the Web browser assumes?</td></tr>
+		  <tr><td><ol type="a"> <li> Heading information is to appear in bold letters</li>
+		   <li> Heading information is to appear on its own line</li>
+		   <li> Heading information has a hyperlink</li>
+		   <li> Heading information is shown as a size six</li></ol></td></tr>
+			<tr> <td>192. For every Web document, you can add words that appear in the upper left bar area of your browser.
+					What set of tags allows you to provide this information?</td></tr>
+		  <tr><td><ol type="a"> <li> &lt;head&gt;&lt;/head&gt;</li>
+		   <li> &lt;head&gt;&lt;head&gt;</li>
+		   <li> &lt;label&gt;&lt;label&gt;</li>
+		   <li> &lt;title&gt;&lt;/title&gt;</li></ol></td></tr>
+			<tr> <td>193. If you wanted to create text that was a different color or font than other text in your Web page,
+					what type of tag would you use?</td></tr>
+		  <tr><td><ol type="a"> <li> Layout</li>
+		   <li> Basic formatting</li>
+		   <li> Design</li>
+		   <li> Outline</li></ol></td></tr>
+			<tr> <td>194. When creating a Web document, what format is used to express an image’s height and width?
+			</td></tr>
+		  <tr><td><ol type="a"><li> Centimeters</li>
+		   <li> Pixels</li>
+		   <li> Dots per inch</li>
+		   <li> Inches</li></ol></td></tr>
+		</table><br>
+         <footer>-------------------------END------------------------</footer>
+	 </center>
+	</body>
+	</html>
