@@ -1,0 +1,6 @@
+ Create Custom Module with all 3 type of plugins with different sort orders:
+Product A Plugin (Sort Order 10)
+Product B Plugin (Sort Order 20)
+Product C Plugin (Sort Order 30)
+ Display output in the Magento Log(var/log/plugin-sortorder.log) file
+Commit this custom module in the git repo along with "var/log/plugin-sortorder.log" file
