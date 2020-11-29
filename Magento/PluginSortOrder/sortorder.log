@@ -1,0 +1,12 @@
+2020-11-29T16:52:27+00:00 INFO (6): Before Execute From Plugin C
+2020-11-29T16:52:27+00:00 INFO (6): Around Before Proceed Execute From Plugin C
+2020-11-29T16:52:27+00:00 INFO (6): Before Execute From Plugin B
+2020-11-29T16:52:27+00:00 INFO (6): Around Before Proceed Execute From Plugin B
+2020-11-29T16:52:27+00:00 INFO (6): Before Execute From Plugin A
+2020-11-29T16:52:27+00:00 INFO (6): Around Before Proceed Execute From Plugin A
+2020-11-29T16:52:27+00:00 INFO (6): Around After Proceed Execute From Plugin A
+2020-11-29T16:52:27+00:00 INFO (6): After Execute From Plugin A
+2020-11-29T16:52:27+00:00 INFO (6): Around After Proceed Execute From Plugin B
+2020-11-29T16:52:27+00:00 INFO (6): After Execute From Plugin B
+2020-11-29T16:52:27+00:00 INFO (6): Around After Proceed Execute From Plugin C
+2020-11-29T16:52:27+00:00 INFO (6): After Execute From Plugin C

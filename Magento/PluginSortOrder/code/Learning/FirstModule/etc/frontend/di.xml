@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="PluginA" type="Learning\FirstModule\PluginA\Plugin\Product" sortOrder="30" />
+        <plugin name="PluginB" type="Learning\FirstModule\PluginB\Plugin\Product" sortOrder="20" />
+        <plugin name="PluginC" type="Learning\FirstModule\PluginC\Plugin\Product" sortOrder="10" />
+    </type>
+</config>
