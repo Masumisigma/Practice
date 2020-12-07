@@ -1,0 +1,37 @@
+<?php
+$collection = $this->getTestCollection();
+print_r($collection);
+?>
+<table class="data table" id="test-data-table">
+    <caption class="table-caption">Vky Test Data</caption>
+    <thead>
+    <tr>
+        <th scope="col" class="col ID">ID</th>
+        <th scope="col" class="col Company">Company</th>
+        <th scope="col" class="col Name">Name</th>
+        <th scope="col" class="col Email">Email</th>
+        <th scope="col" class="col Telephone">Telephone</th>
+        <th scope="col" class="col Comment">Comment</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($collection as $key => $data): ?>
+        <tr>
+            <?php print_r($data);?>
+            <td data-th="ID" class="col ID"><?php echo $data->gettest_id(); ?></td>
+            <td data-th="Company" class="col Company"><?php echo $data->getcompany(); ?></td>
+            <td data-th="Name" class="col Name"><?php echo $data->getname(); ?></td>
+            <td data-th="Email" class="col Email"><?php echo $data->getemail(); ?></td>
+            <td data-th="Telephone" class="col Telephone"><?php echo $data->gettelephone(); ?></td>
+            <td data-th="Comment" class="col Comment"><?php echo $data->getcomment(); ?></td>
+
+           <!-- <td data-th="Actions" class="col actions">
+                <a href="<?php /*echo $block->getBaseUrl().'test/index/view/id/'.$data->getTestId(); */?>" class="action view">
+                    <span>View</span>
+                </a>
+            </td>-->
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
