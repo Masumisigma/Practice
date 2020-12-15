@@ -1,0 +1,5 @@
+CURD Operation with frontend form.
+Create a custom form having 6 fields firstname, last name, gender, email id, phone number and comment.
+You need to give proper validation like registration page and submit the data.
+Need to save data in the db and display in the backend grid. Allow admin to change/update/edit those data. 
+Note: Grid should contains all the default Magento feature, like global search, filter based on different fields, add new record, edit, delete, mass delete, update status for multiple records. Status field should display in the backend only.
