@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <!--<type name="Magento\Directory\Model\ResourceModel\Region\Collection">
+        <plugin name="Task5_DisallowState_Limit_State_Filter_Plugin" type="Task5\DisallowState\Plugin\StateFilter"/>
+    </type>-->
+    <type name="Magento\Directory\Model\ResourceModel\Region\Collection">
+        <plugin name="Task4_DisallowState::region_collection" type="Task4\DisallowState\Plugin\Directory\Model\ResourceModel\Region\StateFilter" sortOrder="1" disabled="false"/>
+    </type>
+    <!-- We can not write a plugin for Magento\Directory\Helper\Data so we have to rewrite it. And it is for address from my account -->
+    <preference for="Magento\Directory\Helper\Data" type="Task4\DisallowState\Rewrite\Directory\Helper\Data" />
+</config>
