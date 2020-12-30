@@ -1,0 +1,2 @@
+Create and display new attribute in the billing and shippind address, it should work as firstname in the frontend customer address section and in the backend order edit page and customer edit page
+Create a cutom address attribute, that should work like billing/shipping firstname, it will be a text attribiute, save value and display in the backend customer grid. It should work in customer address edit section frontend, customer address edit section backend and customer edit address in order new/edit page.
