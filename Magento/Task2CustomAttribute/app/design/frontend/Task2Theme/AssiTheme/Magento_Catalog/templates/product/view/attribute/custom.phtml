@@ -1,0 +1,22 @@
+<?php
+$product = $block->getProduct();
+$_getMyAttr1 = $product->getResource()->getAttribute('clothing_material');
+
+// Get Value
+$_attributeValue1 = $_getMyAttr1->getFrontend()->getValue($product);
+//$attrData = $product->getData('clothing_material'); //default code
+$attrData1 = $product->getData('dynamic_price');
+//$blockTitle = $this->getData('title');
+if (trim($_attributeValue1) !== "") : ?>
+    <div class="product-full-width-section">
+        <h2 class="product-section-title">Clothing Material : <?php echo $_attributeValue1; ?></h2>
+       <!--<h2> <?php /*echo $attrData; */?></h2>-->
+    </div>
+<?php endif; ?>
+<?php
+if (trim($attrData1) !== "") : ?>
+<div class="product-full-width-section">
+    <h2 class="product-section-title">Dynamic Price :  <?php echo $attrData1; ?> </h2>
+   <!-- <h2></h2>-->
+</div>
+<?php endif; ?>
