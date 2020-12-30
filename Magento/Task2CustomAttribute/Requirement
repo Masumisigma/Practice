@@ -1,0 +1,5 @@
+Create and Display new two attribute (text and dropdown) in PLP and PDP
+There will be two attributes:
+1) Material : dropdown attribute: option should be popluated : Please use source mode to display option values.
+2) Dynamic Price: text attribute : readonly : not allow admin to update : value will be multiply with price and weight using after product save even observer and save it.
+Note: Both attribute should display in PLP page next to product name, for dropdown attribute it should use in layered navigation, PDP page next and product name
