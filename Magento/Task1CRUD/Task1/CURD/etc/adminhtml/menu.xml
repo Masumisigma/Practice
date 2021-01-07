@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Task1_CURD::curd" title="CustomForm" translate="title" module="Task1_CURD" sortOrder="20"  resource="Task1_CURD::curd"/>
+        <!-- <add id="Mageplaza_HelloWorld::post" title="Manage Posts" module="Mageplaza_HelloWorld" sortOrder="10" action="mageplaza_helloworld/post" resource="Mageplaza_HelloWorld::post" parent="Mageplaza_HelloWorld::helloworld"/>-->
+
+        <add id="Task1_CURD::curdlist" title="CustomForm" module="Task1_CURD" sortOrder="30" parent="Task1_CURD::curd" action="customform/customform/index" resource="Task1_CURD::curd"/>
+
+    </menu>
+</config>

@@ -1,0 +1,229 @@
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">task1_crud_form.task1_crud_form_data_source</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="back" class="Task1\CURD\Block\Adminhtml\Edit\Custom\BackButton"/>
+            <button name="delete" class="Task1\CURD\Block\Adminhtml\Edit\Custom\DeleteButton"/>
+            <button name="reset" class="Task1\CURD\Block\Adminhtml\Edit\Custom\ResetButton"/>
+            <button name="save_and_continue" class="Task1\CURD\Block\Adminhtml\Edit\Custom\SaveAndContinueButton"/>
+            <button name="save" class="Task1\CURD\Block\Adminhtml\Edit\Custom\SaveButton"/>
+        </buttons>
+        <namespace>task1_crud_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>task1_crud_form.task1_crud_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="task1_crud_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="customform/customform/save"/>
+        </settings>
+       <!-- <aclResource>Sigma_Contact::contact</aclResource>-->
+        <dataProvider class="Task1\CURD\Model\Custom\DataProvider" name="task1_crud_form_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general">
+        <settings>
+            <label/>
+        </settings>
+        <field name="id" formElement="input">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="source" xsi:type="string">customform</item>
+            </item>
+        </argument>
+        <settings>
+            <dataType>text</dataType>
+            <visible>false</visible>
+            <dataScope>id</dataScope>
+        </settings>
+        </field>
+        <field name="firstname" sortOrder="20" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">customform</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>true</visible>
+                <label translate="true">First Name</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="lastname" sortOrder="30" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">customform</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>true</visible>
+                <label translate="true">Last Name</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="email" sortOrder="40" formElement="input">
+            <settings>
+                <dataType>text</dataType>
+                <visible>true</visible>
+                <label translate="true">Email</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                    <rule name="validate-email" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="telephone" sortOrder="50" formElement="input">
+            <settings>
+                <dataType>text</dataType>
+                <visible>true</visible>
+                <label translate="true">Telephone</label>
+            </settings>
+        </field>
+        <field name="gender" formElement="select" component="Magento_Ui/js/form/element/select">
+            <argument name="data" xsi:type="array">
+                <item name="filter" xsi:type="array">select</item>
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="array">customform</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>select</dataType>
+                <visible>true</visible>
+                <label>Gender</label>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Task1\CURD\Model\Custom\Source\Gender"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="status" formElement="select" component="Magento_Ui/js/form/element/select">
+            <argument name="data" xsi:type="array">
+                <item name="filter" xsi:type="array">select</item>
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="array">customform</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>select</dataType>
+                <visible>true</visible>
+                <label>Status</label>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Task1\CURD\Model\Custom\Source\Status"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <!--<field name="gender" sortOrder="60" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="string">Task1\CURD\Ui\Component\Listing\Column\Myoptions</item>
+                <item name="config" xsi:type="array">
+                <item name="filter" xsi:type="string">select</item>
+                <item name="label" xsi:type="string" translate="true">Gender</item>
+                <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
+                <item name="dataType" xsi:type="string">select</item>
+                <item name="editor" xsi:type="array">
+                    <item name="editorType" xsi:type="string">select</item>
+                    <item name="source" xsi:type="string">customform</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">false</item>
+                    </item>
+                </item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>true</visible>
+                <label translate="true">Gender</label>
+            </settings>
+        </field>-->
+       <!-- <column name="gender">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Task1\CURD\Ui\Component\Listing\Column\Myoptions</item>
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Gender</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
+                    <item name="dataType" xsi:type="string">select</item>
+                    <item name="editor" xsi:type="array">
+                        <item name="editorType" xsi:type="string">select</item>
+                        <item name="validation" xsi:type="array">
+                            <item name="required-entry" xsi:type="boolean">false</item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+        </column>-->
+      <!--  <field name="gender" component="Magento_Ui/js/grid/columns/select" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="options" xsi:type="array">Task1\CURD\Model\Custom\Source\Gender</item>
+                    <item name="source" xsi:type="string">customform</item>
+                    <item name="filter" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Gender</item>
+                    <item name="dataType" xsi:type="string">select</item>
+                    &lt;!&ndash;<item name="editor" xsi:type="array">
+                        <item name="editorType" xsi:type="string">select</item>
+                        <item name="validation" xsi:type="array">
+                            <item name="required-entry" xsi:type="boolean">false</item>
+                        </item>
+                    </item>&ndash;&gt;
+                </item>
+            </argument>
+           &lt;!&ndash; <settings>
+                <label translate="true">Gender</label>
+               &lt;!&ndash; <options class="Sigma\Crud\Model\Source\Gender"/>&ndash;&gt;
+
+              &lt;!&ndash;  <options class="Task1\CURD\Ui\Component\Listing\Column\Myoptions"/>&ndash;&gt;
+
+            </settings>&ndash;&gt;
+        </field>-->
+        <!--<field name="gender" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                <item name="options" xsi:type="array">Task1\CURD\Model\Custom\Source\Gender</item>
+                    <item name="source" xsi:type="string">customform</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>true</visible>
+            </settings>
+        </field>-->
+        <field name="comment" sortOrder="140" formElement="input">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Comment</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+    </fieldset>
+</form>

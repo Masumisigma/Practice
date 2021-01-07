@@ -1,0 +1,503 @@
+<!--
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">task1_crud_post_listing.task1_crud_post_listing_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="add">
+                <url path="*/*/add"/>
+                <class>primary</class>
+                <label translate="true">Add New Block</label>
+            </button>
+        </buttons>
+        <spinner>task1_crud_columns</spinner>
+        <deps>
+            <dep>task1_crud_post_listing.task1_crud_post_listing_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="task1_crud_post_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+      &lt;!&ndash;  <aclResource>Sigma_Contact::contact</aclResource>&ndash;&gt;
+        <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider" name="task1_crud_post_listing_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <bookmark name="bookmarks"/>
+        <columnsControls name="columns_controls"/>
+        <exportButton name="export_button"/>
+        <filterSearch name="fulltext"/>
+        <filters name="listing_filters">
+            <argument name="data" xsi:type="array">
+                <item name="observers" xsi:type="array">
+                    <item name="column" xsi:type="string">column</item>
+                </item>
+            </argument>
+            <settings>
+                <templates>
+                    <filters>
+                        <select>
+                            <param name="template" xsi:type="string">ui/grid/filters/elements/ui-select</param>
+                            <param name="component" xsi:type="string">Magento_Ui/js/form/element/ui-select</param>
+                        </select>
+                    </filters>
+                </templates>
+            </settings>
+            <filterSelect name="store_id" provider="${ $.parentName }">
+                <settings>
+                    <options class="Magento\Store\Ui\Component\Listing\Column\Store\Options"/>
+                    <caption translate="true">All Store Views</caption>
+                    <label translate="true">Purchased From</label>
+                    <dataScope>store_id</dataScope>
+                    <imports>
+                        <link name="visible">componentType = column, index = ${ $.index }:visible</link>
+                    </imports>
+                </settings>
+            </filterSelect>
+        </filters>
+        <massaction name="listing_massaction">
+            <action name="delete">
+                <settings>
+                    <confirm>
+                        <message translate="true">Are you sure you want to delete selected items?</message>
+                        <title translate="true">Delete items</title>
+                    </confirm>
+                    <url path="customform/customform/MassDelete"/>
+                    <type>delete</type>
+                    <label translate="true">Delete</label>
+                </settings>
+            </action>
+            <action name="edit">
+                <settings>
+                    <callback>
+                        <target>editSelected</target>
+                        <provider>task1_crud_post_listing.task1_crud_post_listing.task1_crud_columns_editor</provider>
+                    </callback>
+                    <type>edit</type>
+                    <label translate="true">Edit</label>
+                </settings>
+            </action>
+        </massaction>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="task1_crud_columns">
+        &lt;!&ndash;<settings>
+            <childDefaults>
+                <param name="fieldAction" xsi:type="array">
+                    <item name="provider" xsi:type="string">mycontact_mycontact_grid.mycontact_mycontact_grid.mycontact_mycontact_columns.actions</item>
+                    <item name="target" xsi:type="string">applyAction</item>
+                    <item name="params" xsi:type="array">
+                        <item name="0" xsi:type="string">view</item>
+                        <item name="1" xsi:type="string">${ $.$data.rowIndex }</item>
+                    </item>
+                </param>
+            </childDefaults>
+        </settings>&ndash;&gt;
+        <settings>
+            <editorConfig>
+                <param name="clientConfig" xsi:type="array">
+                    <item name="saveUrl" xsi:type="url" path="customform/customform/InlineEdit"/>
+                    <item name="validateBeforeSave" xsi:type="boolean">false</item>
+                </param>
+                <param name="indexField" xsi:type="string">id</param>
+                <param name="enabled" xsi:type="boolean">true</param>
+                <param name="selectProvider" xsi:type="string">task1_crud_post_listing.task1_crud_post_listing.task1_crud_columns.ids</param>
+            </editorConfig>
+            <childDefaults>
+                <param name="fieldAction" xsi:type="array">
+                    <item name="provider" xsi:type="string">task1_crud_post_listing.task1_crud_post_listing.task1_crud_columns_editor</item>
+                    <item name="target" xsi:type="string">startEdit</item>
+                    <item name="params" xsi:type="array">
+                        <item name="0" xsi:type="string">${ $.$data.rowIndex }</item>
+                        <item name="1" xsi:type="boolean">true</item>
+                    </item>
+                </param>
+            </childDefaults>
+        </settings>
+        <selectionsColumn name="ids">
+            <settings>
+                <indexField>id</indexField>
+            </settings>
+        </selectionsColumn>
+        <column name="firstname">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">First Name</label>
+            </settings>
+        </column>
+        <column name="lastname">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Last Name</label>
+            </settings>
+        </column>
+        <column name="email">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Email</label>
+            </settings>
+        </column>
+        <column name="gender">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Gender</label>
+                <visible>false</visible>
+            </settings>
+        </column>
+        <column name="comment">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Comment</label>
+                <visible>false</visible>
+            </settings>
+        </column>
+        <column name="telephone">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Telephone</label>
+                <visible>false</visible>
+            </settings>
+        </column>
+        <column name="status">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Status</label>
+                <visible>false</visible>
+            </settings>
+        </column>
+        <actionsColumn name="actions" class="Sigma\Contact\Ui\Component\Listing\Column\Action" sortOrder="100">
+            <settings>
+                <indexField>id</indexField>
+            </settings>
+        </actionsColumn>
+    </columns>
+</listing>
+
+-->
+
+
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+<argument name="data" xsi:type="array">
+    <item name="js_config" xsi:type="array">
+        <item name="provider" xsi:type="string">task1_crud_post_listing.task1_crud_post_listing_data_source</item>
+    </item>
+</argument>
+<settings>
+    <buttons>
+        <button name="add">
+            <url path="*/*/add"/>
+            <class>primary</class>
+            <label translate="true">Add New Member</label>
+        </button>
+    </buttons>
+    <spinner>task1_crud_columns</spinner>
+    <deps>
+        <dep>task1_crud_post_listing.task1_crud_post_listing_data_source</dep>
+    </deps>
+</settings>
+<dataSource name="task1_crud_post_listing_data_source" component="Magento_Ui/js/grid/provider">
+    <settings>
+        <storageConfig>
+            <param name="indexField" xsi:type="string">id</param>
+        </storageConfig>
+        <updateUrl path="mui/index/render"/>
+    </settings>
+   <!-- <aclResource>Magento_Cms::page</aclResource>-->
+    <dataProvider class="Magento\Cms\Ui\Component\DataProvider" name="task1_crud_post_listing_data_source">
+        <settings>
+            <requestFieldName>id</requestFieldName>
+            <primaryFieldName>id</primaryFieldName>
+        </settings>
+    </dataProvider>
+</dataSource>
+<listingToolbar name="listing_top">
+    <settings>
+        <sticky>true</sticky>
+    </settings>
+    <bookmark name="bookmarks"/>
+    <columnsControls name="columns_controls"/>
+    <filterSearch name="fulltext"/>
+    <filters name="listing_filters">
+        <argument name="data" xsi:type="array">
+            <item name="observers" xsi:type="array">
+                <item name="column" xsi:type="string">column</item>
+            </item>
+        </argument>
+        <settings>
+            <templates>
+                <filters>
+                    <select>
+                        <param name="template" xsi:type="string">ui/grid/filters/elements/ui-select</param>
+                        <param name="component" xsi:type="string">Magento_Ui/js/form/element/ui-select</param>
+                    </select>
+                </filters>
+            </templates>
+        </settings>
+        <filterSelect name="store_id" provider="${ $.parentName }">
+            <settings>
+                <captionValue>0</captionValue>
+                <options class="Magento\Cms\Ui\Component\Listing\Column\Cms\Options"/>
+                <label translate="true">Store View</label>
+                <dataScope>store_id</dataScope>
+                <imports>
+                    <link name="visible">componentType = column, index = ${ $.index }:visible</link>
+                </imports>
+            </settings>
+        </filterSelect>
+    </filters>
+    <massaction name="listing_massaction">
+        <action name="delete">
+            <settings>
+                <confirm>
+                    <message translate="true">Are you sure you want to delete selected items?</message>
+                    <title translate="true">Delete items</title>
+                </confirm>
+                <url path="customform/customform/massDelete"/>
+                <type>delete</type>
+                <label translate="true">Delete</label>
+            </settings>
+        </action>
+        <action name="edit">
+            <settings>
+                <callback>
+                    <target>editSelected</target>
+                    <provider>task1_crud_post_listing.task1_crud_post_listing.task1_crud_columns_editor</provider>
+                </callback>
+                <type>edit</type>
+                <label translate="true">Edit</label>
+            </settings>
+        </action>
+       <!-- <action name="disable">
+        <settings>
+            <url path="customform/customform/massDisable"/>
+            <type>disable</type>
+            <label translate="true">Disable</label>
+        </settings>
+    </action>
+    <action name="enable">
+        <settings>
+            <url path="customform/customform/massEnable"/>
+            <type>enable</type>
+            <label translate="true">Enable</label>
+        </settings>
+    </action>-->
+        <action name="enable">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="type" xsi:type="string">enable</item>
+                    <item name="label" xsi:type="string" translate="true">Enable</item>
+                    <item name="url" xsi:type="url" path="customform/customform/massStatus/status/1"/>
+                </item>
+            </argument>
+        </action>
+        <action name="disable">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="type" xsi:type="string">disable</item>
+                    <item name="label" xsi:type="string" translate="true">Disable</item>
+                    <item name="url" xsi:type="url" path="customform/customform/massStatus/status/0"/>
+                </item>
+            </argument>
+        </action>
+
+       <!-- <action name="change_status">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="type" xsi:type="string">change_status</item>
+                    <item name="label" xsi:type="string" translate="true">Change status</item>
+                </item>
+            </argument>
+            <argument name="actions" xsi:type="configurableObject">
+                <argument name="class" xsi:type="string">Mageplaza\Rewardpoints\Ui\Component\MassAction\Status\Options</argument>
+                <argument name="data" xsi:type="array">
+                    <item name="urlPath" xsi:type="string">rewardpoints/earningrates/massStatus</item>
+                    <item name="paramName" xsi:type="string">status</item>
+                </argument>
+            </argument>
+        </action>-->
+    </massaction>
+    <paging name="listing_paging"/>
+</listingToolbar>
+<columns name="task1_crud_columns">
+    <settings>
+        <editorConfig>
+            <param name="clientConfig" xsi:type="array">
+                <item name="saveUrl" xsi:type="url" path="customform/customform/inlineEdit"/>
+                <item name="validateBeforeSave" xsi:type="boolean">false</item>
+            </param>
+            <param name="indexField" xsi:type="string">id</param>
+            <param name="enabled" xsi:type="boolean">true</param>
+            <param name="selectProvider" xsi:type="string">task1_crud_post_listing.task1_crud_post_listing.cms_page_columns.ids</param>
+        </editorConfig>
+        <childDefaults>
+            <param name="fieldAction" xsi:type="array">
+                <item name="provider" xsi:type="string">cms_page_listing.cms_page_listing.task1_crud_columns_editor</item>
+                <item name="target" xsi:type="string">startEdit</item>
+                <item name="params" xsi:type="array">
+                    <item name="0" xsi:type="string">${ $.$data.rowIndex }</item>
+                    <item name="1" xsi:type="boolean">true</item>
+                </item>
+            </param>
+        </childDefaults>
+    </settings>
+    <selectionsColumn name="ids">
+        <settings>
+            <indexField>id</indexField>
+            <resizeEnabled>false</resizeEnabled>
+            <resizeDefaultWidth>55</resizeDefaultWidth>
+        </settings>
+    </selectionsColumn>
+    <column name="id">
+        <settings>
+            <filter>textRange</filter>
+            <label translate="true">ID</label>
+            <sorting>asc</sorting>
+        </settings>
+    </column>
+    <column name="firstname">
+        <settings>
+            <filter>text</filter>
+            <editor>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <editorType>text</editorType>
+            </editor>
+            <label translate="true">First Name</label>
+        </settings>
+    </column>
+    <column name="lastname">
+        <settings>
+            <filter>text</filter>
+            <editor>
+                <validation>
+                    <rule name="validate-identifier" xsi:type="boolean">true</rule>
+                </validation>
+                <editorType>text</editorType>
+            </editor>
+            <label translate="true">Last Name</label>
+        </settings>
+    </column>
+    <column name="email">
+        <settings>
+            <filter>text</filter>
+            <editor>
+                <validation>
+                    <rule name="validate-identifier" xsi:type="boolean">true</rule>
+                </validation>
+                <editorType>text</editorType>
+            </editor>
+            <label translate="true">Email</label>
+        </settings>
+    </column>
+    <column name="telephone">
+        <settings>
+            <filter>text</filter>
+            <editor>
+                <validation>
+                    <rule name="validate-identifier" xsi:type="boolean">true</rule>
+                </validation>
+                <editorType>text</editorType>
+            </editor>
+            <label translate="true">Telephone</label>
+        </settings>
+    </column>
+    <column name="comment">
+        <settings>
+            <filter>text</filter>
+            <editor>
+                <validation>
+                    <rule name="validate-identifier" xsi:type="boolean">true</rule>
+                </validation>
+                <editorType>text</editorType>
+            </editor>
+            <label translate="true">Comment</label>
+        </settings>
+    </column>
+    <!--<column name="gender"  sortOrder="190">
+        <settings>
+            <filter>text</filter>
+            <editor>
+                <editorType>text</editorType>
+            </editor>
+            <dataType>text</dataType>
+            <label translate="true">Gender</label>
+        </settings>
+    </column>-->
+    <column name="gender" component="Magento_Ui/js/grid/columns/select">
+        <settings>
+            <filter>select</filter>
+            <editor>
+                <editorType>select</editorType>
+            </editor>
+            <options class="Task1\CURD\Model\Custom\Source\Gender"/>
+            <dataType>select</dataType>
+            <label translate="true">Gender</label>
+    </settings>
+       <!-- <argument name="data" xsi:type="array">
+            <item name="options" xsi:type="object">Task1\CURD\Ui\Component\Listing\Column\Myoptions</item>
+            <item name="config" xsi:type="array">
+                <item name="filter" xsi:type="string">select</item>
+                <item name="label" xsi:type="string" translate="true">Gender</item>
+                <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
+                <item name="dataType" xsi:type="string">select</item>
+                <item name="editor" xsi:type="array">
+                    <item name="editorType" xsi:type="string">select</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">false</item>
+                    </item>
+                </item>
+            </item>
+        </argument>-->
+    </column>
+    <column name="status" component="Magento_Ui/js/grid/columns/select">
+    <settings>
+        <filter>select</filter>
+        <editor>
+            <editorType>select</editorType>
+        </editor>
+        <options class="Task1\CURD\Model\Custom\Source\Status"/>
+        <dataType>select</dataType>
+        <label translate="true">Status</label>
+    </settings>
+    </column>
+
+<!--
+    <column name="status">
+        <argument name="data" xsi:type="array">
+        <item name="options" xsi:type="object">Task1\CURD\Ui\Component\Listing\Column\Mystatus</item>
+        <item name="config" xsi:type="array">
+            <item name="filter" xsi:type="string">select</item>
+            <item name="label" xsi:type="string" translate="true">Status</item>
+            <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
+            <item name="dataType" xsi:type="string">select</item>
+            <item name="editor" xsi:type="array">
+                <item name="editorType" xsi:type="string">select</item>
+                <item name="validation" xsi:type="array">
+                    <item name="required-entry" xsi:type="boolean">false</item>
+                </item>
+            </item>
+        </item>
+        </argument>
+    </column>
+-->
+    <actionsColumn name="actions" class="Task1\CURD\Ui\Component\Listing\Column\PageActions" sortOrder="100">
+        <settings>
+            <indexField>id</indexField>
+            <resizeEnabled>false</resizeEnabled>
+            <resizeDefaultWidth>107</resizeDefaultWidth>
+        </settings>
+    </actionsColumn>
+</columns>
+</listing>
